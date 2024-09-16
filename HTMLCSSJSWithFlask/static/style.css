@@ -1,0 +1,309 @@
+body{
+    margin: 0; /* Removes the default margin to ensure the image covers the whole body */
+    background-image: url('./images/back.svg'); /* Update the path to your SVG file */
+    background-size: 148% auto; /* Scales the image to fit the width, adjusting the height automatically */
+    background-repeat: no-repeat;
+    background-position: 40% top; /* Adjusts the positioning if necessary */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.list-item-content a:visited {
+  color: purple; /* Change the color to purple for visited links */
+}
+
+  .search-bar {
+    width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-content: center;
+    height: 48px;
+    justify-content: space-between;
+  }
+
+    .search-bar input {
+      width: 710px;
+      height: 48px;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      font-size: 0.9em
+    }
+
+  #search-button {
+    background-image: url('./images/search-solid.svg'); /* Path to your icon image */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    opacity: 0.3;
+  }
+
+  #search-input{
+    padding-left: 10px;
+    color: gray;
+    opacity: 0.8;
+    border-right:#CCCCCC solid 1px;
+  }
+  #search-button:hover{
+    opacity: 0.6;
+  }
+
+  #clear-button{
+    background-image: url('./images/times-solid.svg'); /* Path to your icon image */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Removes the default border */
+    cursor: pointer;
+    background-color: transparent;
+    height: 15px; /* Adjust based on your icon's size */
+    width: 15px; /* Adjust based on your icon's size */
+    opacity: 0.3;
+    margin-right: 15px;
+    margin-top: 17px;
+  }
+
+  #clear-button:hover{
+    opacity: 0.6;
+  }
+  .no-record-found {
+    background-color: #eaeaea; /* Reddish pink background */
+    padding: 3px 120px 3px 120px;
+    margin-top: 15%;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    display: none;
+}
+  .search-container{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    width: 68%;
+    background-color: #F9F9FB;
+    margin: 0;
+    display: flex;
+    height: 60px;
+    margin-top: 10%;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .navbar a:last-child {
+    border-right: none;
+  }
+  .navbar a.selected {
+    background-color: #CCCCCC;
+  }
+  .navbar a:not(.selected):hover {
+    background-color: #e0e0e0;
+  }
+
+  #company-profile{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 8%;
+  }
+  #stock-summary{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 8%;
+  }
+  #company-profile img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2%;
+  }
+  .info-table {
+    width: 48%;
+    border-collapse: collapse;
+  }
+  .info-table td{
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .info-table .key {
+    width: 50%;
+    text-align: right;
+    font-weight: bold;
+  }
+  .info-table .value {
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  }
+  /* Remove top border from the first row and bottom border from the last row */
+  .info-table tr:first-child td {
+    border-top: 1px solid #ddd;
+  }
+  .info-table tr:last-child td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .updown{
+    height: 7%;
+    width: 7%;
+    margin-left: 5px;
+  }
+
+  .updown-div{
+    display: flex;
+  }
+
+  .sentiment-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+.recommendation-trends{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.indicator{
+  display: flex;
+}
+.sentiment-indicator{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sentiment-indicator div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px 8px;
+    color: white;
+    text-align: center;
+}
+
+.strong-sell-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center; /* Centers text horizontally */
+  color: #ed2938; /* Example text color */
+}
+.strong-sell {
+    width: 15px;
+    height: 35px;
+    background-color: #ed2938; /* red */
+}
+.sell {
+    width: 18px;
+    height: 35px;
+    background-color: #b25f4a; /* light red */
+}
+.neutral {
+  width: 25px;
+    height: 35px;
+    background-color: #77945c; /* light green */
+}
+.buy {
+  width: 30px;
+  height: 35px;
+  background-color: #3bca6d; /* green */
+}
+.strong-buy {
+  width: 30px;
+  height: 35px;
+  background-color: #01ff7f; /* dark green */
+}
+.strong-buy-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center; /* Centers text horizontally */
+  color: #01ff7f; /* Example text color */
+}
+
+  .content {
+    display: none; /* Hide all content by default */
+    /* padding: 20px; */
+  }
+  .active-content {
+    display: block; /* Only the active content will be shown */
+  }
+
+  #charts{
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  #chart-container{
+    width: 100%;
+  }
+
+  #latest-news{
+    margin-top: 2%;
+    width: 68%;
+  }
+  .list-item {
+    background-color: #F9F9FB;
+    display: flex; /* Use flexbox layout */
+    align-items: start; /* Align items vertically */
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  .list-item img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 100px; /* Adjust the width as necessary */
+    height: 100px;
+    margin-right: 20px; /* Adjust the spacing between the image and the text */
+  }
+
+  .list-item-content {
+    flex-grow: 1; /* Allow the text content to take up the remaining space */
+  }
+
+  .list-item h3 {
+    margin: 0 0 0 0; /* Add some margin below the title */
+    font-size: 1.2em; /* Adjust the size as necessary */
+  }
+
+  .list-item .date {
+    margin: 0 0 0 0; /* Add some margin below the date */
+    color: #666; /* A lighter shade for the date */
+    font-size: 1.0em; /* Smaller font size for the date */
+  }
+
+  .list-item a {
+    color: #0066cc; /* Color for the link */
+    text-decoration: underline; /* No underline by default */
+    font-size: 1.0em; /* Size of the link text */
+  }
+
+  .list-item a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }

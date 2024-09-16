@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_popup_bought"
+        android:orientation="vertical"
+        android:layout_marginLeft = "15dp"
+        android:layout_marginRight = "15dp"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Congratulations!"
+            android:textSize="24sp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/successDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have successfully bought 4 shares of AAPL"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="italic"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DONE"
+            android:textColor="@color/green"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

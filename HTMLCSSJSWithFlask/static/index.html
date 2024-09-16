@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Search</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <p style="font-size: 27px;font-family: Roboto, sans-serif; font-weight: 300;">Stock Search</p>
+
+    <form id="search-form" action="">
+        <div class="search-bar">
+            <div>
+                <input type="submit" id="search-button" value=" ">
+                <input type="text" id="search-input" placeholder="Enter Stock Ticker Symbol" required>
+            </div>
+            <input type="button" id="clear-button" value="">
+        </div>
+    </form>
+
+    <div class="no-record-found">
+        <p>Error: No record has been found, please enter a valid symbol</p>
+    </div>
+
+    <div class="search-container">
+
+        <div class="navbar">
+            <a href="#company-profile" class="selected">Company</a>
+            <a href="#stock-summary" class="">Stock Summary</a>
+            <a href="#charts" class="">Charts</a>
+            <a href="#latest-news" class="">Latest News</a>
+        </div>
+
+        <div id="company-profile" class="content active-content">
+            <img src="" alt="" class="company-logo">
+
+            <table class="info-table">
+                <tr>
+                <td class="key">Company Name</td>
+                <td class="value company-name"></td>
+                </tr>
+                <tr>
+                <td class="key">Stock Ticker Symbol</td>
+                <td class="value ticker-symbol"></td>
+                </tr>
+                <tr>
+                <td class="key">Stock Exchange Code</td>
+                <td class="value stock-exchange-code"></td>
+                </tr>
+                <tr>
+                <td class="key">Company Start Date</td>
+                <td class="value company-start-date"></td>
+                </tr>
+                <tr>
+                    <td class="key">Category</td>
+                    <td class="value category"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="stock-summary" class="content">
+            <table class="info-table">
+                <tr>
+                <td class="key">Stock Ticker Symbol</td>
+                <td class="value ticker-symbol"></td>
+                </tr>
+                <tr>
+                <td class="key">Trading Day</td>
+                <td class="value trading-day"></td>
+                </tr>
+                <tr>
+                <td class="key">Previous Closing Price</td>
+                <td class="value prv-closing-price"></td>
+                </tr>
+                <tr>
+                <td class="key">Opening Price</td>
+                <td class="value opening-price"></td>
+                </tr>
+                <tr>
+                    <td class="key">High Price</td>
+                    <td class="value high-price"></td>
+                </tr>
+                <tr>
+                    <td class="key">Low Price</td>
+                    <td class="value low-price"></td>
+                </tr>
+                <tr>
+                    <td class="key">Change</td>
+                    <td class="value change"> <img src="" class="updown change-img" alt=""></td>
+                </tr>
+                <tr>
+                    <td class="key">Change Percent</td>
+                    <td class="value change-percent"> <img class="updown change-percent-img" src="" alt=""></td>
+                </tr>
+            </table>
+            <div class="recommendation-trends">
+                <div class="indicator">
+                    <div class="strong-sell-text">
+                        Strong<br>
+                        Sell
+                    </div>
+                    <div class="sentiment-indicator">
+                        <div class="strong-sell"><p></p></div>
+                        <div class="sell"><p></p></div>
+                        <div class="neutral"><p></p></div>
+                        <div class="buy"><p></p></div>
+                        <div class="strong-buy"><p></p></div>
+                    </div>
+                    <div class="strong-buy-text">
+                        Strong<br>
+                        Buy
+                    </div>
+                </div>
+                <p style="font-family: Roboto, sans-serif; font-weight: 200">Recommendation Trends</p>
+            </div>
+        </div>
+
+        <div id = "charts" class="content">
+            <div id="chart-container"></div>
+        </div>
+
+        <div id="latest-news" class="content">
+        </div>
+
+    </div>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="static/script.js"></script>
+</body>
+</html>

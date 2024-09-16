@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/line_background"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/tvTicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:text="AAPL"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTicker"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:text="11 shares"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/imgArrow"
+        android:text="$1901.15"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ivChangeIndicator"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="5dp"
+        android:layout_toStartOf="@+id/tvPriceChangeAmount"
+        android:src="@drawable/trending_up" />
+
+    <TextView
+        android:id="@+id/tvPriceChangeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvPriceChangePercentage"
+        android:text="$1.76"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvPriceChangePercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/imgArrow"
+        android:text="(0.09%)"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imgArrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/right_arrow"/>
+
+</RelativeLayout>

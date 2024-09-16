@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="#000000"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ListView
+        android:id="@+id/searchListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="40dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingTop="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Date will be here"
+            android:textColor="#7c7c7c"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/portfolioTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_marginTop="0dp"
+            android:background="#e1e3e5"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="PORTFOLIO"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <LinearLayout
+            android:id="@+id/portfolioTitles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portfolioTitle"
+            android:gravity="center_vertical"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/portfolioTitle">
+
+            <TextView
+                android:id="@+id/netWorthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Net Worth"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="#7c7c7c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cashBalanceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="4dp"
+                android:text="Cash Balance"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="#7c7c7c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/portfolioValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portfolioTitles"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/portfolioTitles"
+            android:background="@drawable/line_background">
+
+            <TextView
+                android:id="@+id/netWorthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="$12345.67"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="#7c7c7c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cashBalanceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="4dp"
+                android:text="$12345.67"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="#7c7c7c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/spinner"-->
+<!--            style="?android:attr/progressBarStyleLarge"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignTop="@+id/date"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="168dp"-->
+<!--            android:layout_marginTop="375dp"-->
+<!--            android:layout_marginEnd="167dp"-->
+<!--            android:layout_marginBottom="380dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPortfolio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portfolioValues"
+            />
+
+        <TextView
+            android:id="@+id/favouritesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerViewPortfolio"
+            android:background="#e1e3e5"
+            android:paddingLeft="18dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="FAVOURITES"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewPortfolio" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFavourites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favouritesTitle"
+            />
+
+        <TextView
+            android:id="@+id/tvFinnhub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerViewFavourites"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Powered by Finnhub"
+            android:textAlignment="center"
+            android:textColor="#a9a9a6"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewFavourites" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

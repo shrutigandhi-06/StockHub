@@ -1,0 +1,21 @@
+
+.my-table td,
+.my-table th {
+  padding: .1rem;
+}
+
+.my-table-bottom-border {
+  border-top: none !important;
+  border-bottom: 1px solid #dee2e6; /* Bootstrap's default border color for tables */
+}
+
+tr{
+  border-bottom: 1px solid lightgray;
+}
+
+@media (max-width: 768px) {
+  .my-table-container {
+    display: flex;
+    justify-content: center;
+  }
+}
